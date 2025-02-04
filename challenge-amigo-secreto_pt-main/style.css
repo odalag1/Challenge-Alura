@@ -1,0 +1,202 @@
+:root {
+    --color-primary: #4B69FD;
+    --color-secondary: #FFF9EB;
+    --color-tertiary: #C4C4C4;
+    --color-button: #FE652B;
+    --color-button-hover: #E55720;
+    --color-text: #444;
+    --color-white: #FFFFFF;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-dark: rgba(0, 0, 0, 0.3);
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+/* Corpo da página */
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, var(--color-primary), #6A85FF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Estrutura principal */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    background: var(--color-white);
+    border-radius: 16px;
+    box-shadow: 0 10px 20px var(--shadow-dark);
+    overflow: hidden;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Banner */
+.header-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--color-primary);
+    padding: 30px;
+    color: var(--color-white);
+    text-align: center;
+}
+
+.header-banner img {
+    width: 120px;
+    margin-top: 10px;
+    filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* Seção de entrada */
+.input-section {
+    background: var(--color-secondary);
+    padding: 30px;
+    border-radius: 16px 16px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: inset 0 4px 8px var(--shadow-light);
+}
+
+/* Títulos */
+.main-title {
+    font-size: 32px;
+    font-weight: 900;
+    text-align: center;
+    color: var(--color-white);
+    text-shadow: 2px 2px 8px var(--shadow-dark);
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Input e botão de adicionar */
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.input-name {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid var(--color-primary);
+    border-radius: 25px 0 0 25px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+.input-name:focus {
+    border-color: var(--color-button);
+    box-shadow: 0 0 8px var(--color-button);
+}
+
+/* Botão de adicionar */
+.button-add {
+    background-color: var(--color-tertiary);
+    color: var(--color-text);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.button-add:hover {
+    background-color: #a1a1a1;
+    transform: scale(1.05);
+}
+
+/* Lista de amigos */
+.name-list {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+    text-align: center;
+    font-size: 18px;
+    color: var(--color-text);
+}
+
+/* Botão de sortear */
+.button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.button-draw {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 250px;
+    padding: 12px 20px;
+    color: var(--color-white);
+    background: linear-gradient(135deg, var(--color-button), var(--color-button-hover));
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.button-draw img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.button-draw:hover {
+    transform: scale(1.1);
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .input-wrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-name {
+        border-radius: 25px;
+        border-right: 2px solid var(--color-primary);
+    }
+
+    .button-add {
+        border-radius: 25px;
+        width: 100%;
+    }
+
+    .button-draw {
+        max-width: 100%;
+    }
+}
