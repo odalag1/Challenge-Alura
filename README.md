@@ -1,14 +1,12 @@
-# Amigo Secreto 🎉
+# Amigo Secreto 
 
-Este projeto é um simples sorteador de **Amigo Secreto** desenvolvido com **HTML, CSS e JavaScript**. Ele permite que os usuários adicionem nomes à lista e façam o sorteio aleatório de um único amigo.
+Este projeto é um simples sorteador de **Amigo Secreto** desenvolvido com **HTML, CSS e JavaScript** para o fim do curso da Alura. Ele permite que os usuários adicionem nomes à lista e façam o sorteio aleatório de um único amigo.
 
 ## 🛠 Tecnologias Utilizadas
 
 - **HTML** → Estrutura da página.
 - **CSS** → Estilização da interface.
 - **JavaScript** → Lógica de funcionamento.
-
-## 🚀 Como funciona o código
 
 ### 📌 Adicionar Amigo
 
